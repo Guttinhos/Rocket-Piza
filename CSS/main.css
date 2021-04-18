@@ -80,6 +80,7 @@ body {
 
 /* Fim  do Banner */
 
+/*PRODUTO*/
 .row h2 {
   text-align: center;
   text-transform: uppercase;
@@ -87,26 +88,25 @@ body {
   margin-bottom: 100px;
 }
 
-.product_box {
-  margin-left: 550px;
+.product_box h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: orangered;
 }
 
-.product_box img {
+.product_box {
   align-items: center;
 }
 
 .product_detail {
   width: 578px;
+  margin-left: 660px;
   display: flex;
   flex-direction: column;
   margin-bottom: 27px;
   color: whitesmoke;
-}
-
-.product_box h3 {
-  font-size: 30px;
-  text-transform: uppercase;
-  color: orangered;
 }
 
 .product_detail p {
@@ -118,9 +118,15 @@ body {
   margin: 20px auto;
 }
 
+.price {
+  color: red;
+}
+
 /*Button*/
 .btn {
   padding: 15px 40px;
+  width: 200px;
+  margin-left: 190px;
   background-color: orangered;
   border-radius: 30px;
   color: white;
