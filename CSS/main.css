@@ -45,6 +45,10 @@ body {
   padding: 10px;
 }
 
+.nav .menu li a:hover {
+  color: whitesmoke;
+}
+
 /* Banner */
 
 .banner {
@@ -123,6 +127,7 @@ body {
 }
 
 /*Button*/
+
 .btn {
   padding: 15px 40px;
   width: 200px;
@@ -133,6 +138,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 500px;
 }
 
 /*TABELA*/
@@ -166,4 +172,18 @@ body {
   border-width: 1px;
   overflow: hidden;
   word-break: normal;
+}
+
+/*Footer*/
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
