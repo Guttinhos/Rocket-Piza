@@ -6,134 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main.css">
-    <title>Legendary Motorsport</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="ha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/4=" crossorigin="anonymous"></script>
+    <title>Rocket Pizza</title>
 </head>
 
 <body>
     <header class="header">
-
         <div class="nav">
-
-            <img width="200" src="./img/Banner/Legendary-carro.png" alt="Foto Logo Legendary Motorsport">
-
-            <nav class="menu">
-
+            <img width="100" src="./img/Banner/Pizzalogo.png" alt="Foto Logo Legendary Motorsport">
+            <nav class="home">
                 <ul>
                     <li class="active"> <a href="#">Home</a> </li>
+                    <li class="active"><a href="#">Menu</a></li>
                     <li class="active"><a href="#">Quem somos</a></li>
-                    <li class="active"><a href="#">Nosso catalogo</a></li>
                     <li class="active"><a href="#">Fale Conosco</a></li>
                 </ul>
-
             </nav>
-
         </div>
     </header>
     <div class="banner">
-        <img src="./img/Banner/Legendary-logo.png" alt="Legendary">
+        <img width="500" src="./img/Banner/Pizzalogo.png" alt="Legendary">
     </div>
     <div class="container">
-        <div class="row">
-            <h2>Catalogo</h2>
+        <div class="menu">
+            <h2>Menu</h2>
+            <table id="tabela"></table>
+        </div>
+        <div class="escolhersabor">
+            <h2>Escolha Quantos Sabores</h2>
+            <select onchange="changeSabor()" id="qtdsabor">
+                <option value="1">Selecione Quantos Sabores</option>
+                <option value="1">1 Sabor</option>
+                <option value="2">2 Sabores</option>
+                <option value="3">3 Sabores</option>
+            </select>
         </div>
         <div class="box-list">
             <div class="product">
-
-                <div class="product_box">
-                    <h3>Audi Rs6</h3>
-
-                    <img width="600" src="./img/Carros/Audi-RS6-Avant_1.jpg" alt="Foto Audi rs6">
-
+                <div class="product_box" id="product1" style="display: block;">
+                    <h3>Apenas 1 Sabor</h3>
                 </div>
-
+                <div class="product_box" id="product2">
+                    <h3>Apenas 2 Sabores</h3>
+                </div>
+                <div class="product_box" id="product3">
+                    <h3>Apenas 3 Sabores</h3>
+                </div>
                 <div class="product_detail">
-
-                    <p>Viva a vida ao máximo
-                        Audi RS 6 Avant</p>
-
-                    <p>A Audi RS 6 Avant é um carro que mexe com o imaginário de nove entre dez entusiastas de
-                        automóveis.</p>
-                    <table class="tg">
-                        <tr>
-                            <th class="tg-031e" colspan="2">FICHA TECNICA</th>
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Potência</td>
-                            <td class="tg-031e">600HP</td>
-
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Velocidade máxima</td>
-                            <td class="tg-031e">305 km/h</td>
-
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Peso</td>
-                            <td class="tg-031e">2.230 kg</td>
-
-                        </tr>
-                    </table>
-                    <p class="price">
-                        Valor: R$ 1.150.000
-                    </p>
-
-                    <a class="btn" target="_blank"
-                        href="https://www.webmotors.com.br/comprar/audi/rs6/4-0-avant-v8-twinturbo-mhev-tiptronic/4-portas/2020-2021/36046337?pos=a36046337g:&np=1">
-                        Pedir agora
-                    </a>
-                </div>
-            </div>
-            <div class="product">
-
-                <div class="product_box">
-                    <h3>McLaren P1</h3>
-
-                    <img width="600" src="./img/Carros/McLaren-P1-XP05_925x520_acf_cropped.jpg" alt="Foto MacLaren p1">
-
-                </div>
-
-                <div class="product_detail">
-                    <p>O Futuro está Aqui!</p>
-                    <p>O McLaren P1 é um supercarro feito pela fabricante inglesa McLaren Automotive. Ele é o tão
-                        esperado sucessor do McLaren F1.</p>
-                    <table class="tg">
-                        <tr>
-                            <th class="tg-031e" colspan="2">FICHA TECNICA</th>
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Potência</td>
-                            <td class="tg-031e">916 HP</td>
-
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Velocidade máxima</td>
-                            <td class="tg-031e">350 km/h</td>
-
-                        </tr>
-                        <tr>
-                            <td class="tg-031e">Peso</td>
-                            <td class="tg-031e">1.450 kg</td>
-
-                        </tr>
-                    </table>
-                    <p class="price">
-                        Valor: US$ 3,7 milhões
-                    </p>
-                    <a class="btn" target="_blank"
-                        href="https://www.dupontregistry.com/autos/listing/2014/mclaren/p1/2458584">
-                        Pedir agora
-                    </a>
+                    <p>Selecione o sabor!!</p>
+                    <select class="sabores" id="sabor1" style="display: block;">
+                        <option value="#">----Selecione o sabor-----</option>
+                    </select>
+                    <select class="sabores" id="sabor2">
+                        <option value="2">----Selecione o sabor-----</option>
+                    </select>
+                    <select class="sabores" id="sabor3">
+                        <option value="3">----Selecione o sabor-----</option>
+                    </select>
+                    <table id="pedido"></table>
+                    <button class="btn" onclick="montarPedido()">Montar Pedido</button>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="footer">
-        <p>UNIME - União Metropolitana de Educação e Cultura</p>
-        <p>Disciplina: Programação Web</p>
-        <p>Período letivo: 2021.1</p>
-        <p>Professor: Pablo Ricardo Roxo Silva</p>
-        <p>Aluno: Gutemberg Salomão Mauricio Filho</p>
-    </footer>
+        <footer class="footer">
+            <p>UNIME - União Metropolitana de Educação e Cultura</p>
+            <p>Disciplina: Programação Web</p>
+            <p>Período letivo: 2021.1</p>
+            <p>Professor: Pablo Ricardo Roxo Silva</p>
+            <p>Aluno: Gutemberg Salomão Mauricio Filho</p>
+        </footer>
+        <script src="./JS/script.js"></script>
 </body>
 
 </html>
