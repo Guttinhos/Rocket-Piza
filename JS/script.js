@@ -1,4 +1,4 @@
-function changeSabor() {
+function changeSabor() { // Faz uma manipulação no DOM onde ao selecionar o sabor que quer a div vai responder de acordo com o escolhido
   var sabor = document.getElementById("qtdsabor").value;
   document.getElementById(`product${sabor}`).style.display = "block";
 
@@ -19,10 +19,11 @@ function changeSabor() {
     document.getElementById(`sabor3`).style.display = "none";
   }
 }
+
 var apisabores = [];
 var total = 0;
 
-function listar() {
+function listar() { // Cria atráves de um requisição AJAX  a tabela  ja convertendo os valores para o BRL 
   $.ajax({
     url: "https://pizzaria.roxo.dev.br/",
     method: "get",
@@ -53,7 +54,7 @@ function listar() {
   });
 }
 
-function montarPedido() {
+function montarPedido() { // A função montar pedido  faz toda logica proposta a atividade 
   $(document).ready(function () {
     var sabor1 = $("#sabor1").val();
     var sabor2 = $("#sabor2").val();
@@ -93,7 +94,7 @@ function montarPedido() {
   });
 }
 
-function calculoPedido(valor, tamanho) {
+function calculoPedido(valor, tamanho) { // a Função calculoPedido faz o calculo de acordo com o valor e o tamanho da Pizza proposto na atividade
   total += valor / tamanho;
 }
 
